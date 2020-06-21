@@ -8,12 +8,12 @@ from flask import request
 
 server = 'MAFVAZEBISQL01'
 database = 'TX_MAFFashionDW'
-#username = 'aateam'
-#password = 'uKPdyRRNEK7qQ9xS'
+username = 'LGopalchar'
+password = 'Maf@2020'
 #driver= '{ODBC Driver 17 for SQL Server}'
 drivers = [item for item in pyodbc.drivers()]
 driver = drivers[-1]
-driver='SQL Server Native Client 11.0'
+#driver='SQL Server Native Client 11.0'
 
 
 #sql_conn = pyodbc.connect('DRIVER={SQL Server Native Client 11.0};SERVER=MAFVAZEBISQL01;DATABASE=TX_MAFFashionDW;Trusted_Connection=yes') 
@@ -31,7 +31,7 @@ driver='SQL Server Native Client 11.0'
 
 
 
-cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;DATABASE='+database+';Trusted_Connection=yes')
+cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
 
