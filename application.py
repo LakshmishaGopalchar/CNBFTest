@@ -13,6 +13,7 @@ database = 'TX_MAFFashionDW'
 #driver= '{ODBC Driver 17 for SQL Server}'
 drivers = [item for item in pyodbc.drivers()]
 driver = drivers[-1]
+driver='SQL Server Native Client 11.0'
 
 
 #sql_conn = pyodbc.connect('DRIVER={SQL Server Native Client 11.0};SERVER=MAFVAZEBISQL01;DATABASE=TX_MAFFashionDW;Trusted_Connection=yes') 
